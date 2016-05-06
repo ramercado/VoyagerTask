@@ -1,2 +1,2 @@
 # VoyagerTask
-Github First Time
+~ VoyagerTask is a bash script which will check memory usage
