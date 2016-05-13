@@ -9,7 +9,9 @@
 	p=${freespace%%.*}
         echo " Percentage used space is $freespace "
         if [[ $p -ge 90 ]]; then
-	tenprocess=$(ps aux | head -1 ; ps aux | sort -nk +4 | tail -7)
+# Hi you can use both line code to print out ten process but the second one will give much precise and smooth output than the first i put
+	tenprocess=$(ps aux | head -1 ; ps aux | sort -nk +4 | tail -7) #this will give you top 10 process that use ur memory
+#	tenprocess=$(ps aux --sort=-%cpu | grep -m 11 -v %(whoami)) # this will also give you top 10 process but much precise and clear it's up to you which one to use
 	echo "$(hostname)::  Memory almost out of space Date: $(date)"
 	echo " Top 10 Processes that consume memory are :: " 
 	echo  "$tenprocess"
